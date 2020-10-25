@@ -1,23 +1,19 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+    <SelectedUsers />
     <Selection />
-    <List />
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
-import List from "./components/List";
 import Selection from "./components/Selection";
+import SelectedUsers from "./components/SelectedUsers";
 
 export default {
   name: "App",
   components: {
-    // HelloWorld,
-    List,
     Selection,
+    SelectedUsers,
   },
 };
 </script>
@@ -30,5 +26,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  text-align: left;
 }
 </style>
