@@ -17,6 +17,7 @@ export default {
   },
   data: function() {
     return {
+      selectedUsers: [],
       users: [
         "Boris Becker",
         "Steffi Graf",
@@ -26,7 +27,6 @@ export default {
         "Axel Stein",
         "Roberto Blanko",
       ],
-      selectedUsers: [],
     };
   },
 };
