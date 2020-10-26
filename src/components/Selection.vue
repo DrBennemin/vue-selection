@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li @click="addUserToList(user)" v-for="user in users" :key="user">
+      <li @click="addUserToList(user)" v-for="(user, key) in users" :key="key">
         {{ user }}
       </li>
     </ul>
@@ -10,13 +10,11 @@
 
 <script>
 export default {
-  props: ["users"],
+  props: ["users", "selectedUsers"],
   methods: {
     addUserToList(user) {
-      this.users.push(user);
+      this.selectedUsers.push(user);
     },
   },
 };
 </script>
-
-<style></style>

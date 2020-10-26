@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <SelectedUsers :selectedusers="selectedUsers" />
-    <Selection :users="users" />
+    <SelectedUsers :selected-users="selectedUsers" />
+    <Selection :users="users" :selected-users="selectedUsers" />
   </div>
 </template>
 
@@ -10,7 +10,6 @@ import Selection from "./components/Selection";
 import SelectedUsers from "./components/SelectedUsers";
 
 export default {
-  name: "App",
   components: {
     Selection,
     SelectedUsers,

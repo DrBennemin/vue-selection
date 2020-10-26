@@ -1,35 +1,19 @@
 <template>
-  <div>
-    <span v-show="isVisible">
-      Some name
-      <button type="button" @click="hideUser">x</button>
+  <div v-show="isVisible">
+    <span v-for="(user, key) in selectedUsers" :key="key">
+      {{ user }}
+      <button type="button" @click="isVisible = false">x</button>
     </span>
-    <ul>
-      <li @click="addUserToList(user)" v-for="user in users" :key="user">
-        {{ user }}
-      </li>
-    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SelectedUsers",
-  props: ["selectedusers"],
+  props: ["selectedUsers"],
   data() {
     return {
       isVisible: true,
     };
   },
-  methods: {
-    hideUser() {
-      this.isVisible = false;
-    },
-    addUserToList(user) {
-      this.selectedUsers.push(user);
-    },
-  },
 };
 </script>
-
-<style></style>
