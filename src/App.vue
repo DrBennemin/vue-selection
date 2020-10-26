@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <SelectedUsers />
-    <Selection />
+    <SelectedUsers :selectedusers="selectedUsers" />
+    <Selection :users="users" />
   </div>
 </template>
 
@@ -14,6 +14,20 @@ export default {
   components: {
     Selection,
     SelectedUsers,
+  },
+  data: function() {
+    return {
+      users: [
+        "Boris Becker",
+        "Steffi Graf",
+        "Karl Dall",
+        "Hennes Bender",
+        "Rudi Karell",
+        "Axel Stein",
+        "Roberto Blanko",
+      ],
+      selectedUsers: [],
+    };
   },
 };
 </script>
